@@ -1,5 +1,5 @@
-# typed: strict
-# frozen_string_literal: true
+ ped: strict
+#frozen_string_literal: true
 
 module Cask
   # Sorted set containing all cask artifacts.
