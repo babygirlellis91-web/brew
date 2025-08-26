@@ -3,13 +3,15 @@
 
 module Cask
   # Sorted set containing all cask artifacts.
-  class ArtifactSet < ::Set
+  class
+< ::Set
     extend T::Generic
 
     Elem = type_member(:out) { { fixed: Artifact::AbstractArtifact } }
 
     sig { params(block: T.nilable(T.proc.params(arg0: Elem).returns(T.untyped))).void }
-    def each(&block)
+    def
+  (&block)
       return enum_for(T.must(__method__)) { size } unless block
 
       to_a.each(&block)
@@ -17,7 +19,8 @@ module Cask
     end
 
     sig { returns(T::Array[Artifact::AbstractArtifact]) }
-    def to_a
+    def
+  
       super.sort
     end
   end
